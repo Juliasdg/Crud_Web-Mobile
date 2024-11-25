@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820899452134",
+    "project_id": "tlou-db",
+    "storage_bucket": "tlou-db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820899452134:android:ccd10a1347cca7ddc61727",
+        "android_client_info": {
+          "package_name": "com.example.apptlou"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzk44Xmwk7M7EVz_qH8hTHZ64WlbfOHbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
