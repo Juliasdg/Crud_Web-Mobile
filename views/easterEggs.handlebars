@@ -1,0 +1,109 @@
+<!-- Cabeçalho de navegação  !-->
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+</section>
+
+<section class="mainSobre">
+    <div class="banner">
+        <img src="/images/banner.jpg" alt="">
+    </div>
+</section>
+
+<section class="sobre-header">
+    <h1>Curiosidades e Easter Eggs</h1>
+    <p>Conheça as principais curiosidades e Easter Eggs presentes em The Last Of Us</p>
+</section>
+
+<!-- Conteúdo Principal -->
+<section class="curiosidades-content">
+    <div class="container">
+        <div class="row">
+            <!-- Primeira Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>Referência a "Uncharted"</h3>
+                    <p>The Last of Us contém várias referências a outros jogos da Naughty Dog, incluindo *Uncharted*.
+                        Durante a jornada de Joel e Ellie, é possível encontrar alguns itens, como um boneco de ação,
+                        que fazem alusão ao protagonista Nathan Drake.</p>
+                </div>
+            </div>
+
+            <!-- Segunda Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>O Cartaz de Bill</h3>
+                    <p>No capítulo "The Town", existe um cartaz de recrutamento que faz uma referência a Bill,
+                        personagem do jogo. Este cartaz foi colocado por um dos desenvolvedores do jogo como uma espécie
+                        de homenagem ao personagem e à sua história.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Terceira Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>O Relógio de Sarah</h3>
+                    <p>Uma das maiores emoções do jogo acontece logo no início, quando Joel perde sua filha, Sarah. A
+                        peça final dessa tragédia é o relógio de Sarah, que Joel guarda como uma lembrança eterna. O
+                        relógio aparece em vários momentos, reforçando a dor de Joel pela perda.</p>
+                </div>
+            </div>
+
+            <!-- Quarta Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>A Pizza do Shambler</h3>
+                    <p>No momento em que os jogadores encontram os "Shamblers" (uma nova forma de inimigo do jogo), um
+                        dos ambientes apresenta uma pizza jogada no chão. Este detalhe é um aceno a um famoso meme da
+                        comunidade de desenvolvedores e gamers, que brincam sobre a pizza estar "em qualquer lugar".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Quinta Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>Clássica Música de Sarah</h3>
+                    <p>Ao longo do jogo, a música que Sarah ouvia no seu aniversário aparece em momentos chave. A música
+                        simboliza tanto a perda quanto o amor que Joel ainda sente por ela. Essa canção traz um
+                        componente emocional profundo à narrativa do jogo.</p>
+                </div>
+            </div>
+
+            <!-- Sexta Curiosidade -->
+            <div class="col-md-6">
+                <div class="curiosidade-box">
+                    <h3>Mensagem de Amor no Game</h3>
+                    <p>Em algumas partes do jogo, é possível encontrar mensagens de amor e esperança espalhadas pelo
+                        mundo. Essas mensagens, muitas vezes escondidas em lugares improváveis, mostram o impacto que as
+                        pessoas tiveram na vida uns dos outros antes da epidemia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

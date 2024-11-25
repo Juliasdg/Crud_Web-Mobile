@@ -1,0 +1,115 @@
+<!-- Cabeçalho de navegação  !-->
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+</section>
+
+<section class="mainSobre">
+    <div class="banner">
+        <img src="/images/banner.jpg" alt="">
+    </div>
+</section>
+
+<section class="sobre-header">
+    <h1>Personagens</h1>
+    <p>Conheça mais sobre os personagens do universo de The Last Of Us.</p>
+</section>
+
+<!--Conteúdo-->
+<div class="personagens-container">
+    <div class="personagem">
+        <img src="/images/joel.png" alt="Joel">
+        <h3>Joel Miller</h3>
+        <p>Joel é um dos principais protagonistas da franquia. Ele é um homem endurecido pelo sofrimento de um mundo
+            pós-apocalíptico e com um passado misterioso. Sua jornada começa quando ele é encarregado de proteger Ellie,
+            uma garota que pode ser a chave para a cura da humanidade.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/ellie.png" alt="Ellie">
+        <h3>Ellie Williams</h3>
+        <p>Ellie é uma jovem corajosa e inteligente que se torna a protagonista de *The Last of Us Part II*. Ela foi
+            criada em um mundo devastado por uma pandemia e carrega uma carga emocional profunda, especialmente devido
+            ao que acontece com aqueles que ela ama.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/abby.png" alt="Abby">
+        <h3>Abby Anderson</h3>
+        <p>Abby é uma personagem complexa que se vê em conflito com as ações e os objetivos de Joel. Sua história é
+            cheia de reviravoltas emocionais, tornando-a uma das figuras mais controversas da série.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/tommy.png" alt="Tommy">
+        <h3>Tommy Miller</h3>
+        <p>Tommy Miller é o irmão mais novo de Joel, que após um desentendimento com ele, acaba indo viver sua vida em
+            um assentamento seguro. Ele é um homem mais idealista e busca uma vida de paz e reconstrução, enquanto Joel
+            se vê cada vez mais envolvido com a luta pela sobrevivência. Embora o relacionamento entre eles tenha sido
+            tenso por um período, Tommy e Joel possuem uma ligação muito forte, e sua amizade é um pilar importante na
+            trama.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/robert.png" alt="Robert">
+        <h3>Robert</h3>
+        <p>Robert é um personagem antagonista que aparece no começo do jogo. Ele trai Joel e Tess, roubando armas deles
+            e colocando em risco a missão deles. Sua ação motiva a busca de Joel e Tess por vingança, impulsionando os
+            eventos que se seguem.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/marlene.png" alt="Marlene">
+        <h3>Marlene</h3>
+        <p>Marlene é a líder do grupo de resistência Firefly. Ela é uma personagem fundamental, com objetivos que se
+            alinham com os de Joel e Ellie, mas suas escolhas e ações ao longo do jogo tornam sua relação com os
+            protagonistas mais complexa e cheia de dilemas.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/bill.png" alt="Bill">
+        <h3>Bill</h3>
+        <p>Bill é um sobrevivente que Joel e Ellie encontram em sua jornada. Ele é cínico, amargurado e vive isolado,
+            mas sua inteligência e habilidades são vitais para a sobrevivência do trio. Sua relação com Joel tem uma
+            história de amizade, mas também de ressentimento.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/henry.png" alt="Henry e Sam">
+        <h3>Henry</h3>
+        <p>Henry é o irmão mais velho e a figura protetora de Sam. Em sua jornada com Joel e Ellie, Henry se revela um
+            personagem com boas intenções, mas que também enfrenta as dificuldades de um mundo em colapso. Sua relação
+            com Ellie e Joel cria um vínculo de amizade e confiança.</p>
+    </div>
+
+    <div class="personagem">
+        <img src="/images/sam.png" alt="Sam">
+        <h3>Sam</h3>
+        <p>Sam, o irmão mais novo de Henry, traz uma leveza à história. Ele é curioso, brincalhão e cria uma forte
+            amizade com Ellie. Sua tragédia é um dos momentos mais emocionantes e trágicos do jogo, impactando
+            profundamente os outros personagens.</p>
+    </div>
+</div>
+</section>

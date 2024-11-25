@@ -1,0 +1,101 @@
+<!-- Cabeçalho de navegação  !-->
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+</section>
+
+<!--Conteúdo-->
+<section class="mainSobre">
+    <div class="banner">
+        <img src="/images/banner.jpg" alt="">
+    </div>
+</section>
+
+<section class="sobre-header">
+    <h1>Sobre o Jogo</h1>
+    <p>Uma narrativa inesquecível em um mundo devastado.</p>
+</section>
+
+<section class="sobre-conteudo">
+    <div class="card">
+        <div class="sobre-texto">
+            <h2>História</h2>
+            <p>
+                Lançado em 14 de junho de 2013 pela Naughty Dog, The Last of Us narra a jornada de Joel e Ellie em um
+                mundo devastado por uma infecção fúngica chamada Cordyceps, que transforma humanos em criaturas
+                violentas. O jogo se passa 20 anos após o início da pandemia, onde sobreviventes lutam contra infectados
+                e outros humanos em meio ao colapso da sociedade.
+                Joel, um homem marcado por traumas, recebe a missão de escoltar Ellie, uma adolescente com imunidade
+                misteriosa, através de um cenário pós-apocalíptico. Conforme enfrentam perigos, sua relação se
+                aprofunda, explorando temas como perda, sacrifício e esperança, em uma narrativa emocionante e
+                envolvente.
+            </p>
+        </div>
+        <div class="sobre-imagem">
+            <img src="/images/historia.png" alt="Cena do jogo The Last of Us">
+        </div>
+    </div>
+</section>
+
+<section class="sobre-conteudo">
+    <div class="card invertido">
+        <div class="sobre-imagem">
+            <img src="/images/logoEmpresa.png" alt="Equipe Naughty Dog">
+        </div>
+        <div class="sobre-texto">
+            <h2>Desenvolvimento</h2>
+            <p>
+                Criado pela renomada equipe da Naughty Dog, sob a liderança de Neil Druckmann e Bruce Straley, The Last
+                of Us marcou a história dos videogames com sua abordagem inovadora. O jogo combina uma narrativa
+                profundamente emocional com mecânicas de jogo imersivas, explorando questões humanas em um cenário
+                sombrio e realista.
+                A equipe utilizou uma avançada captura de movimentos e dublagem para dar vida aos personagens,
+                resultando em performances impactantes. Além disso, a atenção aos detalhes no design dos ambientes e na
+                trilha sonora de Gustavo Santaolalla contribuiu para criar uma experiência inesquecível, elevando o
+                padrão da narrativa em jogos eletrônicos.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="sobre-conteudo">
+    <div class="card">
+        <div class="sobre-texto">
+            <h2>Impacto Cultural</h2>
+            <p>
+                Amplamente reconhecido como um dos maiores jogos de todos os tempos, The Last of Us recebeu inúmeros
+                Game of the Year Awards, consolidando seu lugar na história dos videogames. Sua narrativa envolvente e
+                qualidade técnica revolucionaram o gênero, conquistando tanto críticos quanto jogadores ao redor do
+                mundo.
+                O impacto do jogo foi tão significativo que, em 2023, ele ganhou uma adaptação televisiva de sucesso
+                pela HBO, que expandiu a história para um novo público, reforçando ainda mais seu legado como uma
+                obra-prima cultural.
+            </p>
+        </div>
+        <div class="sobre-imagem">
+            <img src="/images/tlouHBO.png" alt="Prêmios de The Last of Us">
+        </div>
+    </div>
+</section>

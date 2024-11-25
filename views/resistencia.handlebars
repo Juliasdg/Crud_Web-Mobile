@@ -1,0 +1,67 @@
+<!-- Cabeçalho de navegação  !-->
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+
+</section>
+
+<!-- Seção do formulário com convite -->
+<section class="form">
+    <div class="container">
+        <h2 class="text-center text-white mb-4">Junte-se à Resistência</h2>
+        <p class="text-center text-white mb-4">Se você é um verdadeiro aliado e deseja lutar pela nossa causa, preencha
+            suas informações abaixo. Caso seja aceito, não se preocupe... nós encontraremos você.</p>
+
+        <form action="/cadastrar" method="POST">
+            <div class="mb-3 text-start">
+                <label class="form-label text-light">Nome:</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label text-light">Idade:</label>
+                <input type="text" name="idade" class="form-control" id="idade" placeholder="Insira sua idade" required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label text-light">Especialidade:</label>
+                <input type="text" name="especialidade" class="form-control" id="especialidade"
+                    placeholder="Atirador, Combate corpo a corpo..." required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label text-light">Localização Atual:</label>
+                <input type="text" name="localizacao" class="form-control" id="localizacao"
+                    placeholder="Após o envio do formulário, não sai de onde está (caso saia, diga para onde vai)"
+                    required>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label text-light">Mensagem para a Resistência:</label>
+                <textarea name="observacao" class="form-control" placeholder="Deixe sua mensagem" id="observacao"
+                    style="height: 100px"></textarea>
+            </div>
+            <div class="mb-3 text-start">
+                <button type="submit" class="btn btn-danger w-100">Enviar Solicitação</button>
+            </div>
+        </form>
+    </div>
+</section>

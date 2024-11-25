@@ -1,0 +1,66 @@
+<!-- Cabeçalho de navegação  !-->
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+</section>
+
+<!-- Seção do formulário com convite -->
+<section class="form">
+    <div class="container">
+        <h2 class="text-center text-white mb-4">Junte-se à Resistência</h2>
+        <p class="text-center text-white mb-4">Se você é um verdadeiro aliado e deseja lutar pela nossa causa, preencha
+            suas informações abaixo. Caso seja aceito, não se preocupe... nós encontraremos você.</p>
+        <form action="/atualizar/{{resistentes.id}}" method="POST">
+            <div class="mb-3 text-start">
+                <input type="hidden" name="id" class="form-control" value="{{resistentes.id}}">
+                <label class="form-label">Nome:</label>
+                <input type="text" name="nome" class="form-control" value="{{resistentes.data.nome}}">
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Idade:</label>
+                <input type="number" name="idade" class="form-control" value="{{resistentes.data.idade}}">
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Especialidade:</label>
+                <input type="text" name="especialidade" class="form-control" id="especialidade"
+                    value="{{resistentes.data.especialidade}}">
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Localização:</label>
+                <textarea name="localizacao" class="form-control"
+                    style="height: 100px">{{resistentes.data.localizacao}}</textarea>
+            </div>
+            <div class="mb-3 text-start">
+                <label class="form-label">Mensagem:</label>
+                <textarea name="observacao" class="form-control"
+                    style="height: 100px">{{resistentes.data.observacao}}</textarea>
+            </div>
+            <div class="mb-3 text-start">
+                <button type="submit" class="btn text-light" style="background-color:dodgerblue;">Atualizar</button>
+            </div>
+        </form>
+
+    </div>
+</section>

@@ -1,0 +1,68 @@
+<section class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <a class="navbar-brand" href="/">The Last of Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/sobre">Sobre o jogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="/personagens">Personagens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/easterEggs">Easter Eggs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/soundtrack">Soundtrack</a></li>
+                <li class="nav-item"><a class="nav-link" href="/resistencia">Resistência</a></li>
+                {{#if user}}
+                <li class="nav-item"><a class="nav-link" href="/consulta">Consulta</a></li>
+                {{/if}}
+            </ul>
+        </div>
+        <div class="profile-icon">
+            <a href="{{#unless user}}/login{{else}}/logout{{/unless}}">
+                {{#unless user}}<i class="fas fa-user-circle"></i> {{else}}Logout{{/unless}}
+            </a>
+        </div>
+    </nav>
+</section>
+
+<div class="row">
+    <div class="col-12">
+        <br><br>
+        <p class="titulo">Consulta - Formulário de Cadastro de Sobrevivente</p>
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Especialidade</th>
+                    <th>Localização Atual</th>
+                    <th>Mensagem para a Resistência</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each resistentes}}
+                <tr>
+                    <td>{{this.nome}}</td>
+                    <td>{{this.idade}}</td>
+                    <td>{{this.especialidade}}</td>
+                    <td>{{this.localizacao}}</td>
+                    <td>{{this.observacao}}</td>
+                    <td>
+                        <button type="button" class="btn" style="background-color:dodgerblue;"><a
+                                href="/editar/{{this.id}}">Editar</a></button>
+                        <button type="button" class="btn" style="background-color: darkred;"><a
+                                href="/excluir/{{this.id}}">Excluir</a></button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="imgForm">
+    <img src="/images/EllieRiley.png" alt="" srcset="">
+</div>
